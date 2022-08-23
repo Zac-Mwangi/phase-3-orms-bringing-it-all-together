@@ -37,7 +37,7 @@ class Dog
     # insert the dog
     DB[:conn].execute(sql, self.name, self.breed)
 
-    # get the song ID from the database and save it to the Ruby instance
+    # get the DOG ID from the database and save it to the Ruby instance
     self.id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
 
     # return the Ruby instance
